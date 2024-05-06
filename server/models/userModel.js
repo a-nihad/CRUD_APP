@@ -10,12 +10,16 @@ const userSchema = new mongoose.Schema({
     required: [true, "Email is required"],
     unique: true,
   },
-  password: {
+  phone: {
     type: String,
-    required: [true, "Password is required"],
-    maxlength: [10, "must have less or equal than 10 characters"],
-    minlength: [4, "must have more or equal than 4 characters"],
+    required: [true, "Phone Number is required"],
+    maxlength: [13, "must have less or equal than 13 characters"],
+    minlength: [10, "must have more or equal than 10 characters"],
   },
+  place: {
+    type : String,
+    required : [true, "Place is required"],
+  }
 });
 
 export default mongoose.model("User", userSchema);

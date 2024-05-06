@@ -28,9 +28,7 @@ export const getUsers = async (req, res, next) => {
 
     res.status(200).json({
       status: "success",
-      data: {
-        user,
-      },
+      data: user,
     });
   } catch (err) {
     next(err);
